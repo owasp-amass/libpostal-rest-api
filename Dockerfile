@@ -22,10 +22,10 @@ RUN ./bootstrap.sh && \
 ENV HOME=/
 RUN addgroup user \
     && adduser user -D -G user \
-    && mkdir /data \
-    && chown user:user /data
+    && mkdir /server \
+    && chown user:user /server
 USER user
 EXPOSE 8000
-WORKDIR /data
+WORKDIR /server
 STOPSIGNAL SIGINT
 ENTRYPOINT ["/bin/post_serv"]
