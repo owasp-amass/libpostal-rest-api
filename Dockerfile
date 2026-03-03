@@ -1,4 +1,4 @@
-FROM golang:1.25.5-alpine AS build
+FROM golang:1.26.0-alpine AS build
 RUN apk --no-cache add build-base autoconf automake curl libtool
 RUN apk --no-cache add pkgconfig git musl-dev libpostal-dev
 WORKDIR /go/src/github.com/owasp-amass/libpostal-rest-api
